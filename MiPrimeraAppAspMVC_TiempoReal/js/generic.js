@@ -15,3 +15,15 @@ function set(id, valor) {
 function setS(id, valor) {
     document.getElementById(id).src = valor;
 }
+
+function pintar(url, id) {
+
+    //Hacemos la llamada
+    fetch(url).then(res => res.json())
+        .then(res => {
+            //Esto nos devolvera solo los object 
+            alert(res)
+            //Mostrara la data obtenida en formato Json
+            alert(JSON.stringify(res))
+        })
+}

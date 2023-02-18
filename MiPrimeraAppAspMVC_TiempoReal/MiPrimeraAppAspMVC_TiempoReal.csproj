@@ -102,6 +102,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
+    <Content Include="js\categoriacurso.js" />
     <Content Include="js\generic.js" />
     <Content Include="Models\BDCurso.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -117,6 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Clases\CategoriaCursoCLS.cs" />
     <Compile Include="Controllers\CategoriaCursoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
