@@ -16,7 +16,7 @@ function setS(id, valor) {
     document.getElementById(id).src = valor;
 }
 
-function pintar(url, id="divTabla", cabeceras, nombrePropiedades) {
+function pintar(url, id="divTabla", cabeceras, nombrePropiedades, idTabla="tabla") {
 
     //Hacemos la llamada
     fetch(url).then(res => res.json())
@@ -26,7 +26,7 @@ function pintar(url, id="divTabla", cabeceras, nombrePropiedades) {
             //Mostrara la data obtenida en formato Json
            // alert(JSON.stringify(res))
 
-            let contenido = "<table class='table'>";
+            let contenido = "<table id='" + idTabla +"' class='table'>";
             contenido += "<thead>";
             contenido += "<tr>";
             for (const element of cabeceras) {
@@ -55,5 +55,6 @@ function pintar(url, id="divTabla", cabeceras, nombrePropiedades) {
             contenido += "</table>";
             //Lo escribimos
             document.getElementById(id).innerHTML = contenido;
+            $("#" + idTabla).DataTable();
         });
 }
